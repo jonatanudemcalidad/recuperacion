@@ -1,2 +1,0 @@
-# javaCodeSample
-Taller 1
