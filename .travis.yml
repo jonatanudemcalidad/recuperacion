@@ -4,5 +4,7 @@ before_install:
 notifications:
   slack:
     secure: jR28HYNEQb9tYUP5D2izP7P8odYggxYyJDsLPYMlG/5TPPv2GvqSWGb/dAz7VtQxHpwUhnSRZKR/r5bbpA8qKNyMdYLrRarIqPcsHsUk+hknkAqLkcjoaKso+3nUu+B5TQdrZkrYEKwd2vhMsH/EjN2sFJmTxtexu4Ei+Ac9+FDfgDKCaPx/S3MNIBfsQ9PSVbsDs0fu5tEIZZLvRELUcfsD7zJ+G17wUgqogmv51sjh7veIieTtggGW20pRQ7WsQGC4BBj8K8XxZSHrGkd5ObR6bHJCKMIoJE8affvhG+QNTTLcKWvi4y48yuHKn5KIV5nIH/HIYLmGx3TDCpa0oKhWJSqVekFBqBptD0CteLvufF/gXtIhbpcGs9D2wFwWfMR0jui26cUcmCr1PHgrcggkdu/6zuC5bu+O2erNiz5jeV+jYwfuKWOHaMGq3mNe1sDeZv8DBBsZHtVCoYuqzxQ96ojINSa+jv7HJoOawTgJMAcuPMYeYauBc72kp9Dio9PaTRH4poa69kjTe/+L4A+pVd05kbyPA4/tH+Sk0JGJF/Aa3nyCUcZd1ls7Pzhi7XMg35gQTPziC+iIdXwoTsTYKe75JQnt9zT6HHNap6RIvHTOJplYUMng+8/Y7OBf2E/f6lPv6nPW98898baQ8uL5Dbjzj26gSpk2FYBvTTE=
-    on_success: change # default: always
+    on_success: always # default: always
     on_failure: always # default: always
+    template:
+    - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository_slug}@%{branch} by %{author} %{result} in %{duration}"
