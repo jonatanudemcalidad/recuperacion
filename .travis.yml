@@ -7,6 +7,6 @@ notifications:
     on_success: always # default: always
     on_failure: always # default: always
     template:
-      - "Repo `%{repository_slug}` *%{result}* build (<%{build_url}|#%{build_number}>) for commit (<%{compare_url}|%{commit}>) on branch `%{branch}`."
+      - "Repo `%{repository_slug}` *%{result}* build (<%{build_url}|#%{build_number}>) for commit (<%{compare_url}|%{commit}>) on branch `%{branch}`. %{commit} : %{author}): %{message}"
       - "Execution time: *%{duration}*"
       - "Message: %{message}"
